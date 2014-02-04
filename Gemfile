@@ -6,7 +6,6 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'bootstrap-sass-rails'
-gem 'userstamp', :git => "git://github.com/delynn/userstamp.git"
 
 group :development do
   gem 'thin'
