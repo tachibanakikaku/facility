@@ -16,3 +16,4 @@ deploy:
     secure: SuE9ttgNd3Rl40aPPmXkmFs1KZoXE54ZDUxvx3PHiKyoPCD7fDuyXd1W2WRckL2AhQcMYOVROJ8z2JmnDMgZY4ucDd5AxpYSR4fUM3t30Aa8f6LGms5HUJ4mUjCpZJkegGcKhRmnepGT4RwaSUuisZt6kXBdK1oyDoyttT4rwtA=
   app: facility
   on: production
+  run: "rake db:migrate"
