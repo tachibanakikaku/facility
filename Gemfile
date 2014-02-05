@@ -6,9 +6,9 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'bootstrap-sass-rails'
+gem 'thin'
 
 group :development do
-  gem 'thin'
   gem 'html2haml'
   gem 'erb2haml'
 end
