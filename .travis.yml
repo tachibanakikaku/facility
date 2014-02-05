@@ -1,12 +1,18 @@
 language: ruby
 rvm:
-  - 2.0.0
+- 2.0.0
 bundler_args: --without production
 before_script:
-  - cp config/database.yml.travis config/database.yml
-  - mysql -e 'create database facility_test;'
+- cp config/database.yml.travis config/database.yml
+- mysql -e 'create database facility_test;'
 env:
-  - DB=mysql
+- DB=mysql
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - bundle exec rake spec
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake spec
+deploy:
+  provider: heroku
+  api_key:
+    secure: SuE9ttgNd3Rl40aPPmXkmFs1KZoXE54ZDUxvx3PHiKyoPCD7fDuyXd1W2WRckL2AhQcMYOVROJ8z2JmnDMgZY4ucDd5AxpYSR4fUM3t30Aa8f6LGms5HUJ4mUjCpZJkegGcKhRmnepGT4RwaSUuisZt6kXBdK1oyDoyttT4rwtA=
+  app: facility
+  on: production
