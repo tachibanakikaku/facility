@@ -5,5 +5,5 @@ Facility::Application.routes.draw do
   resources :equipment
   resources :shops
 
-  root :to => 'users#index'
+  root to: 'dashboard#index'
 end
