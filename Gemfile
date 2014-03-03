@@ -7,6 +7,7 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'bootstrap-sass-rails'
 gem 'thin'
+gem 'clerk'
 
 group :development do
   gem 'html2haml'
