@@ -2,7 +2,7 @@ Facility::Application.routes.draw do
   devise_for :users
 
   resources :users
-  resources :equipment
+  resources :rooms
   resources :shops
 
   root to: 'dashboard#index'

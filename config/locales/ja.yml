@@ -5,3 +5,6 @@ ja:
   users:
     index:
       title: ユーザ一覧
+  rooms:
+    index:
+      title: 部屋一覧
