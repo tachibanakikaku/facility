@@ -1,4 +1,13 @@
-= t("dashboard.index.title")
-
-= link_to t("users.index.title"), users_path
-= link_to t("rooms.index.title"), rooms_path
+.row
+  .centered.five.columns
+    %h2= t("dashboard.index.title")
+.row
+  %table.striped.rounded
+    %thead
+      %tr
+        %th= "hoge"
+    %tbody
+      %tr
+        %td= link_to t("users.index.title"), users_path
+      %tr
+        %td= link_to t("rooms.index.title"), rooms_path

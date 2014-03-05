@@ -5,11 +5,10 @@ gem 'rails', '3.2.13'
 gem 'devise'
 gem 'jquery-rails'
 gem 'haml-rails'
-gem 'bootstrap-sass-rails'
+gem 'sass-rails', '>= 3.2' # sass-rails needs to be higher than 3.2
+gem 'bootstrap-sass', '~> 3.1.1'
 gem 'thin'
 gem 'clerk'
-gem 'modernizr-rails'
-gem 'gumby-framework'
 
 group :development do
   gem 'html2haml'
@@ -18,7 +17,6 @@ end
 
 group :assets do
   gem 'mysql2'
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'rspec-rails'
   gem 'ffaker'

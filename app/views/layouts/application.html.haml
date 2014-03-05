@@ -1,10 +1,34 @@
 !!!
 %html
   %head
-    %title Facility
-    = stylesheet_link_tag    "application", :media => "all"
+    %title= "Facility"
+    = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "application"
-    = javascript_include_tag :modernizr
     = csrf_meta_tags
   %body
-    = yield
+    %nav.navbar.navbar-default{ role: "navigation" }
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle{ type: "button", "data-toggle" => "collapse", "data-target" => "#bs-example-navbar-collapse-1" }
+            %span.sr-only= "toggle"
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{ href: "#" }
+            %img{ src: "/assets/tkikaku.png" }
+        .collapse.navbar-collapse#bs-example-navbar-collapse-1
+          %ul.nav.navbar-nav
+            %li
+              %a{ href: "https://github.com/tachibanakikaku/facility", target: "_blank"}= "src"
+          %ul.nav.navbar-nav.navbar-right
+            %li.dropdown
+              %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
+                %span.glyphicon.glyphicon-user
+                %b.caret
+              %ul.dropdown-menu{ role: "menu" }
+                %li
+                  %a{ href: "#" }= "logout"
+    .container-fluid
+      .row
+        .container
+          = yield
