@@ -8,6 +8,8 @@ gem 'haml-rails'
 gem 'bootstrap-sass-rails'
 gem 'thin'
 gem 'clerk'
+gem 'modernizr-rails'
+gem 'gumby-framework'
 
 group :development do
   gem 'html2haml'
