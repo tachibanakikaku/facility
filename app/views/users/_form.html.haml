@@ -5,9 +5,23 @@
       %ul
         - @user.errors.full_messages.each do |msg|
           %li= msg
-
-  .field
-    = f.label :name
-    = f.text_field :name
-  .actions
-    = f.submit 'Save'
+  .row
+    .col-xs-6.col-md-4
+      = f.label :name
+      = f.text_field :name, class: "form-control", placeholder: "Taro Yamada"
+  .row
+    .col-xs-6.col-md-4
+      = f.label :email
+      = f.email_field :email, autofocus: true, class: "form-control", placeholder: "taro.yamada@example.com"
+  .row
+    .col-xs-6.col-md-4
+      = f.label :password
+      = f.password_field :password, class: "form-control"
+  .row
+    .col-xs-6.col-md-4
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation, class: "form-control"
+  .row
+    .col-xs-6.col-md-4
+      .actions
+        = f.submit t(:save)

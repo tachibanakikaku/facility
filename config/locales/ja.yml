@@ -5,6 +5,8 @@ ja:
   users:
     index:
       title: ユーザ一覧
+    new:
+      title: ユーザの作成
   rooms:
     index:
       title: 部屋一覧
@@ -17,6 +19,7 @@ ja:
   login: ログイン
   logout: ログアウト
   back: 戻る
+  save: 保存
 
   activerecord:
     models:
@@ -26,6 +29,7 @@ ja:
         name: 名前
         email: メールアドレス
         password: パスワード
+        password_confirmation: パスワード（確認）
         remember_me: ログイン状態を記憶
       room:
         name: 名前
