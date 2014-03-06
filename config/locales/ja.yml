@@ -18,6 +18,7 @@ ja:
     destroy: 削除  
   login: ログイン
   logout: ログアウト
+  configure: 設定
   back: 戻る
   save: 保存
 
