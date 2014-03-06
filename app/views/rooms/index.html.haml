@@ -1,19 +1,14 @@
-%h1 Listing rooms
-
-%table
+%h1= t("rooms.index.title")
+%table.table.table-striped.table-hover
   %tr
-    %th Name
+    %th= Room.human_attribute_name("name")
     %th
     %th
     %th
-
   - @rooms.each do |room|
     %tr
       %td= room.name
-      %td= link_to 'Show', room
-      %td= link_to 'Edit', edit_room_path(room)
-      %td= link_to 'Destroy', room, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Room', new_room_path
+      %td= link_to t("actions.show"), room
+      %td= link_to t("actions.edit"), edit_room_path(room)
+      %td= link_to t("actions.destroy"), room, method: :delete, data: { confirm: 'Are you sure?' }
+= link_to t("actions.new"), new_room_path

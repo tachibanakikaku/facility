@@ -1,13 +1,8 @@
+%h2= t("dashboard.index.title")
 .row
-  .centered.five.columns
-    %h2= t("dashboard.index.title")
-.row
-  %table.striped.rounded
-    %thead
-      %tr
-        %th= "hoge"
-    %tbody
-      %tr
-        %td= link_to t("users.index.title"), users_path
-      %tr
-        %td= link_to t("rooms.index.title"), rooms_path
+  .col-xs-6.col-md-4
+    .list-group
+      %a.list-group-item{ href: users_path }= t("users.index.title") 
+      %a.list-group-item{ href: rooms_path }= t("rooms.index.title")
+
+

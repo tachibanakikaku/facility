@@ -1,19 +1,16 @@
-%h1 Listing users
-
-%table
+%h1= t("users.index.title")
+%table.table.table-striped.table-hover
   %tr
-    %th Name
+    %th= User.human_attribute_name("name")
+    %th= User.human_attribute_name("email")
     %th
     %th
     %th
-
   - @users.each do |user|
     %tr
       %td= user.name
-      %td= link_to 'Show', user
-      %td= link_to 'Edit', edit_user_path(user)
-      %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New User', new_user_path
+      %td= user.email
+      %td= link_to t("actions.show"), user
+      %td= link_to t("actions.edit"), edit_user_path(user)
+      %td= link_to t("actions.destroy"), user, method: :delete, data: { confirm: 'Are you sure?' }
+= link_to t("actions.new"), new_user_path

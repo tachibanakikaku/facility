@@ -1,9 +1,9 @@
-%h2= "Sign in"
+%h2= t(:login)
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .row
     .col-xs-6.col-md-4
       = f.label :email
-      = f.email_field :email, autofocus: true, class: "form-control", placeholder: "xxx@example.com"
+      = f.email_field :email, autofocus: true, class: "form-control", placeholder: "xxxxx@example.com"
   .row
     .col-xs-6.col-md-4
       = f.label :password
@@ -15,7 +15,10 @@
         = f.label :remember_me
   .row
     .col-xs-6.col-md-4
-      = f.submit "Sign in"
-  .row
-    .col-xs-6.col-md-4
-      = render "devise/shared/links"
+      = f.submit t(:login)
+  -# .row
+    -# .col-xs-6.col-md-4
+      -# = render "devise/shared/links"
+
+%a{ href: "https://github.com/tachibanakikaku/facility", target: "_blank" }
+  %img{ style: "position: absolute; top: 0; right: 0; border: 0;", src: "https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67", alt: "Fork me on GitHub", "data-canonical-src" => "https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" }
