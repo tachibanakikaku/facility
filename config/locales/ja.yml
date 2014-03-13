@@ -7,20 +7,29 @@ ja:
       title: ユーザ一覧
     new:
       title: ユーザの作成
+    edit:
+      title: ユーザの編集
   rooms:
     index:
       title: 部屋一覧
+    new:
+      title: 部屋の作成
+    edit:
+      title: 部屋の編集
   actions:
     index: 一覧
     show: 詳細
     new: 新規作成
     edit: 編集
-    destroy: 削除  
+    destroy: 削除
+    destroy_confirm: 本当に削除しますか？
   login: ログイン
   logout: ログアウト
   configure: 設定
   back: 戻る
   save: 保存
+  creator: 作成者
+  updater: 更新者
 
   activerecord:
     models:

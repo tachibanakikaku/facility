@@ -12,5 +12,5 @@
       %td= user.email
       %td= link_to t("actions.show"), user
       %td= link_to t("actions.edit"), edit_user_path(user)
-      %td= link_to t("actions.destroy"), user, method: :delete, data: { confirm: 'Are you sure?' }
+      %td= link_to t("actions.destroy"), user, method: :delete, data: { confirm: t("actions.destroy_confirm") }
 = link_to t("actions.new"), new_user_path
