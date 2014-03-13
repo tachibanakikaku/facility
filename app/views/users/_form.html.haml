@@ -8,11 +8,11 @@
   .row
     .col-xs-6.col-md-4
       = f.label :name
-      = f.text_field :name, class: "form-control", placeholder: "Taro Yamada"
+      = f.text_field :name, autofocus: true, class: "form-control", placeholder: "Taro Yamada"
   .row
     .col-xs-6.col-md-4
       = f.label :email
-      = f.email_field :email, autofocus: true, class: "form-control", placeholder: "taro.yamada@example.com"
+      = f.email_field :email, class: "form-control", placeholder: "taro.yamada@example.com"
   .row
     .col-xs-6.col-md-4
       = f.label :password

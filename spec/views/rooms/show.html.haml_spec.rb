@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "rooms/show" do
   before(:each) do
     @room = assign(:room, stub_model(Room,
-      :name => "Name"
+      name: "Name"
     ))
   end
 

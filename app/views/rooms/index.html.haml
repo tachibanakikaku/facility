@@ -10,5 +10,5 @@
       %td= room.name
       %td= link_to t("actions.show"), room
       %td= link_to t("actions.edit"), edit_room_path(room)
-      %td= link_to t("actions.destroy"), room, method: :delete, data: { confirm: 'Are you sure?' }
+      %td= link_to t("actions.destroy"), room, method: :delete, data: { confirm: t("actions.destroy_confirm") }
 = link_to t("actions.new"), new_room_path
