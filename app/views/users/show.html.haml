@@ -1,9 +1,10 @@
 %p#notice= notice
-
-%p
-  %b Name:
-  = @user.name
-
-= link_to 'Edit', edit_user_path(@user)
+.row
+  .col-xs-2= label_tag :name, User.human_attribute_name("name")
+  .col-xs-2= @user.name
+.row
+  .col-xs-2= label_tag :name, User.human_attribute_name("email")
+  .col-xs-2= @user.email  
+= link_to t("actions.edit"), edit_user_path(@user)
 \|
-= link_to 'Back', users_path
+= link_to t(:back), users_path
