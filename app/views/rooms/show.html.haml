@@ -4,10 +4,10 @@
   .col-xs-2= @room.name
 .row
   .col-xs-2= label_tag :created_by, t(:creator)
-  .col-xs-2= @room.creator.name
+  .col-xs-2= @room.creator.nil? ? "" : @room.creator.name
 .row
   .col-xs-2= label_tag :created_by, t(:updater)
-  .col-xs-2= @room.updater.name
+  .col-xs-2= @room.updater.nil? ? "" : @room.updater.name
 = link_to t("actions.edit"), edit_room_path(@room)
 \|
 = link_to t(:back), rooms_path
