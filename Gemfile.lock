@@ -142,6 +142,8 @@ GEM
     sentient_user (0.3.3)
       railties (>= 3.1)
     sexp_processor (4.4.1)
+    shoulda-matchers (2.5.0)
+      activesupport (>= 3.0.0)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -187,6 +189,7 @@ DEPENDENCIES
   rails_12factor
   rspec-rails
   sass-rails (>= 3.2)
+  shoulda-matchers
   therubyracer
   thin
   uglifier (>= 1.0.3)

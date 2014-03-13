@@ -1,5 +1,11 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject { User.new }
+
+  it { expect(subject).to be_an_instance_of User }
+
+  describe "association" do
+    it { expect(subject).to have_many(:shops).through(:shops_users) }
+  end
 end
