@@ -15,6 +15,10 @@
       = f.email_field :email, class: "form-control", placeholder: "taro.yamada@example.com"
   .row
     .col-xs-6.col-md-4
+      = f.label :shop_ids
+      = f.select :shop_ids, options_from_collection_for_select(@shops, :id, :name, @user.shop_ids), multiple: true, class: "form-control" }
+  .row
+    .col-xs-6.col-md-4
       = f.label :password
       = f.password_field :password, class: "form-control"
   .row
