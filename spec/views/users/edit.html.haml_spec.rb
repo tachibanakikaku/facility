@@ -2,6 +2,9 @@ require 'spec_helper'
 
 describe "users/edit" do
   before(:each) do
+    assign(:shops, [stub_model(Shop,
+      :name => "MyString"
+    ).as_new_record])
     @user = assign(:user, stub_model(User,
       :name => "MyString"
     ))
