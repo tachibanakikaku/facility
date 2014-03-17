@@ -16,6 +16,13 @@ ja:
       title: 部屋の作成
     edit:
       title: 部屋の編集
+  shops:
+    index:
+      title: 店舗一覧
+    new:
+      title: 店舗の作成
+    edit:
+      title: 店舗の編集
   actions:
     index: 一覧
     show: 詳細
@@ -43,4 +50,6 @@ ja:
         password_confirmation: パスワード（確認）
         remember_me: ログイン状態を記憶
       room:
+        name: 名前
+      shop:
         name: 名前

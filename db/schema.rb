@@ -23,8 +23,10 @@ ActiveRecord::Schema.define(:version => 20140303162637) do
 
   create_table "shops", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "shops_users", :force => true do |t|

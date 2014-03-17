@@ -1,9 +1,13 @@
 %p#notice= notice
-
-%p
-  %b Name:
-  = @shop.name
-
-= link_to 'Edit', edit_shop_path(@shop)
+.row
+  .col-xs-2= label_tag :name, Shop.human_attribute_name("name")
+  .col-xs-2= @shop.name
+.row
+  .col-xs-2= label_tag :created_by, t(:creator)
+  .col-xs-2= @shop.creator.nil? ? "" : @shop.creator.name
+.row
+  .col-xs-2= label_tag :created_by, t(:updater)
+  .col-xs-2= @shop.updater.nil? ? "" : @shop.updater.name
+= link_to t("actions.edit"), edit_shop_path(@shop)
 \|
-= link_to 'Back', shops_path
+= link_to t(:back), shops_path

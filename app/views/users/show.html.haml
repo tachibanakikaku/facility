@@ -4,7 +4,13 @@
   .col-xs-2= @user.name
 .row
   .col-xs-2= label_tag :name, User.human_attribute_name("email")
-  .col-xs-2= @user.email  
+  .col-xs-2= @user.email
+.row
+  .col-xs-2= label_tag :created_by, t(:creator)
+  .col-xs-2= @user.creator.nil? ? "" : @user.creator.name
+.row
+  .col-xs-2= label_tag :created_by, t(:updater)
+  .col-xs-2= @user.updater.nil? ? "" : @user.updater.name
 = link_to t("actions.edit"), edit_user_path(@user)
 \|
 = link_to t(:back), users_path
