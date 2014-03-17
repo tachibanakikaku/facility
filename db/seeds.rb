@@ -12,3 +12,10 @@ users = \
    password: "mike123456", password_confirmation: "mike123456" }
 ]
 users.each {|u| User.create!(u) }
+
+rooms = \
+[
+ { name: "1st conference room" },
+ { name: "2nd conference room" }
+]
+rooms.each {|r| Room.create!(r) }
