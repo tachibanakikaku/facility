@@ -1,5 +1,6 @@
 %h1= t("users.edit.title")
 = render 'form'
-= link_to t("actions.show"), @user
-\|
-= link_to t(:back), users_path
+.col-md-4.col-md-offset-5
+  = link_to t("actions.show"), @user
+  \|
+  = link_to t(:back), users_path
