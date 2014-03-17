@@ -23,6 +23,9 @@ ja:
       title: 店舗の作成
     edit:
       title: 店舗の編集
+  reservation:
+    index:
+      title: 予約を管理する
   actions:
     index: 一覧
     show: 詳細
