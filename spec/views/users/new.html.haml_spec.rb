@@ -2,8 +2,11 @@ require 'spec_helper'
 
 describe "users/new" do
   before(:each) do
-    assign(:user, stub_model(User,
+    assign(:shops, [stub_model(Shop,
       :name => "MyString"
+    ).as_new_record])
+    assign(:user, stub_model(User,
+      name: "MyString"
     ).as_new_record)
   end
 

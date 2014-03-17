@@ -1,5 +1,4 @@
-%h1 New shop
-
+%h1= t("shops.new.title")
 = render 'form'
-
-= link_to 'Back', shops_path
+.col-md-4.col-md-offset-5
+  = link_to t(:back), shops_path

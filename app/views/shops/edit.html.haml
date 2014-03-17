@@ -1,7 +1,6 @@
-%h1 Editing shop
-
+%h1= t("shops.edit.title")
 = render 'form'
-
-= link_to 'Show', @shop
-\|
-= link_to 'Back', shops_path
+.col-md-4.col-md-offset-5
+  = link_to t("actions.show"), @shop
+  \|
+  = link_to t(:back), shops_path

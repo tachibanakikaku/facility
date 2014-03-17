@@ -1,13 +1,15 @@
-= form_for @shop do |f|
+= form_for @shop, html: { class: "form-horizontal", role: "form" } do |f|
   - if @shop.errors.any?
     #error_explanation
       %h2= "#{pluralize(@shop.errors.count, "error")} prohibited this shop from being saved:"
       %ul
         - @shop.errors.full_messages.each do |msg|
           %li= msg
-
-  .field
-    = f.label :name
-    = f.text_field :name
-  .actions
-    = f.submit 'Save'
+  .form-group
+    .col-xs-2.control-label
+      = f.label :name
+    .col-md-4
+      = f.text_field :name, autofocus: true, class: "form-control", placeholder: "Shop"
+  .form-group
+    .col-md-2.col-md-offset-1.control-label.actions
+      = f.submit t(:save)

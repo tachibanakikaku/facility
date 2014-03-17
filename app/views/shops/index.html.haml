@@ -1,19 +1,14 @@
-%h1 Listing shops
-
-%table
+%h1= t("shops.index.title")
+%table.table.table-striped.table-hover
   %tr
-    %th Name
+    %th= Shop.human_attribute_name("name")
     %th
     %th
     %th
-
   - @shops.each do |shop|
     %tr
       %td= shop.name
-      %td= link_to 'Show', shop
-      %td= link_to 'Edit', edit_shop_path(shop)
-      %td= link_to 'Destroy', shop, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Shop', new_shop_path
+      %td= link_to t("actions.show"), shop
+      %td= link_to t("actions.edit"), edit_shop_path(shop)
+      %td= link_to t("actions.destroy"), shop, method: :delete, data: { confirm: t("actions.destroy_confirm") }
+= link_to t("actions.new"), new_shop_path
