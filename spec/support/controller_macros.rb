@@ -9,11 +9,11 @@ def login_user
   @request.env["devise.mapping"] = Devise.mappings[:user]
   password = SecureRandom.uuid.delete "-"
   user =
-    User.create({
-                  name: Faker::Name.name,
-                  email: Faker::Internet.email,
-                  password: password,
-                  password_confirmation: password
-                })
+    User.create(
+                name: Faker::Name.name,
+                email: Faker::Internet.email,
+                password: password,
+                password_confirmation: password
+                )
   sign_in user
 end

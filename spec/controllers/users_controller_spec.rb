@@ -11,12 +11,14 @@ describe UsersController do
                  password_confirmation: password
                  )
   }
-  let(:valid_attributes) {{
+  let(:valid_attributes) {
+    {
       name: Faker::Name.name,
       email: Faker::Internet.email,
       password: password,
       password_confirmation: password
-    }}
+    }
+  }
   let(:valid_session) { {} }
 
   before do
@@ -91,7 +93,7 @@ describe UsersController do
       it "updates the requested user" do
         User.any_instance \
           .should_receive(:update_attributes) \
-          .with({ "name" => "new name" })
+          .with("name" => "new name")
         put :update, { id: user1.to_param, user: { name: "new name" } }, valid_session
       end
 
@@ -101,7 +103,7 @@ describe UsersController do
       end
 
       it "redirects to the user" do
-        put :update, { id: user1.to_param, user: valid_attributes}, valid_session
+        put :update, { id: user1.to_param, user: valid_attributes }, valid_session
         response.should redirect_to(user1)
       end
     end
@@ -131,7 +133,7 @@ describe UsersController do
 
     it "redirects to the users list" do
       user = User.create! valid_attributes
-      delete :destroy, { id: user.to_param}, valid_session
+      delete :destroy, { id: user.to_param }, valid_session
       response.should redirect_to(users_url)
     end
   end

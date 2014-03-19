@@ -81,7 +81,7 @@ describe RoomsController do
         room = Room.create! valid_attributes
         Room.any_instance \
           .should_receive(:update_attributes) \
-          .with({ "name" => "MyString" })
+          .with("name" => "MyString")
         put :update, { id: room.to_param, room: { name: "MyString" } }, valid_session
       end
 
