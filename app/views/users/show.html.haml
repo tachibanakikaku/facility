@@ -6,6 +6,9 @@
   .col-xs-2= label_tag :name, User.human_attribute_name("email")
   .col-xs-2= @user.email
 .row
+  .col-xs-2= label_tag :name, User.human_attribute_name("shop_ids")
+  .col-xs-2= @user.shops.empty? ? "" : @user.shops.first.name
+.row
   .col-xs-2= label_tag :created_by, t(:creator)
   .col-xs-2= @user.creator.nil? ? "" : @user.creator.name
 .row

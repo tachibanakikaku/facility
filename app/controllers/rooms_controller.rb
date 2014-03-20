@@ -1,4 +1,6 @@
 class RoomsController < ApplicationController
+  before_filter :load_shops
+
   # GET /rooms
   # GET /rooms.json
   def index

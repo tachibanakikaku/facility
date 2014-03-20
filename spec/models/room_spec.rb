@@ -1,5 +1,12 @@
 require 'spec_helper'
 
 describe Room do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject { Room.new }
+
+  it { expect(subject).to be_an_instance_of Room }
+
+  describe "association" do
+    it { expect(subject).to have_many(:users).through(:reservations) }
+  end
+
 end

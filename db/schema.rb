@@ -11,10 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140303162637) do
+ActiveRecord::Schema.define(:version => 20140320034635) do
+
+  create_table "reservations", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "room_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "rooms", :force => true do |t|
     t.string   "name"
+    t.integer  "shop_id"
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
     t.datetime "created_at",    :null => false

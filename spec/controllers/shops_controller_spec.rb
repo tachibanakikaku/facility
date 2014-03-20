@@ -81,7 +81,7 @@ describe ShopsController do
         shop = Shop.create! valid_attributes
         Shop.any_instance \
           .should_receive(:update_attributes) \
-          .with({ "name" => "MyString" })
+          .with("name" => "MyString")
         put :update, { id: shop.to_param, shop: { name: "MyString" } }, valid_session
       end
 

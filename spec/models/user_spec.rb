@@ -7,5 +7,6 @@ describe User do
 
   describe "association" do
     it { expect(subject).to have_many(:shops).through(:shops_users) }
+    it { expect(subject).to have_many(:rooms).through(:reservations) }
   end
 end

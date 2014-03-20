@@ -58,6 +58,8 @@ class UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.json
   def update
+    params[:user].each { |k, v| params[:user].delete k if params[:user][k].empty? }
+
     @user = User.find(params[:id])
 
     respond_to do |format|
@@ -81,11 +83,5 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url }
       format.json { head :no_content }
     end
-  end
-
-  private
-
-  def load_shops
-    @shops = Shop.all
   end
 end

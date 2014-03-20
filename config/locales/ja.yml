@@ -54,5 +54,6 @@ ja:
         remember_me: ログイン状態を記憶
       room:
         name: 名前
+        shop_id: 所属店舗
       shop:
         name: 名前

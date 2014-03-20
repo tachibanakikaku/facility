@@ -9,4 +9,6 @@ class User < ActiveRecord::Base
 
   has_many :shops, through: :shops_users
   has_many :shops_users
+  has_many :rooms, through: :reservations
+  has_many :reservations
 end
