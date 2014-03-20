@@ -82,10 +82,4 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  private
-
-  def load_shops
-    @shops = Shop.all
-  end
 end

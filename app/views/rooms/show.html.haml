@@ -3,6 +3,9 @@
   .col-xs-2= label_tag :name, Room.human_attribute_name("name")
   .col-xs-2= @room.name
 .row
+  .col-xs-2= label_tag :name, Room.human_attribute_name("shop_id")
+  .col-xs-2= @room.shop.nil? ? "" : @room.shop.name
+.row
   .col-xs-2= label_tag :created_by, t(:creator)
   .col-xs-2= @room.creator.nil? ? "" : @room.creator.name
 .row
