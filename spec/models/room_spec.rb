@@ -8,5 +8,4 @@ describe Room do
   describe "association" do
     it { expect(subject).to have_many(:users).through(:reservations) }
   end
-
 end
