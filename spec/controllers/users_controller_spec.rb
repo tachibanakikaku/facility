@@ -92,8 +92,7 @@ describe UsersController do
     describe "with valid params" do
       it "updates the requested user" do
         User.any_instance \
-          .should_receive(:update_attributes) \
-          .with("name" => "new name")
+          .should_receive(:update_attributes).with("name" => "new name")
         put :update, { id: user1.to_param, user: { name: "new name" } }, valid_session
       end
 
@@ -111,7 +110,11 @@ describe UsersController do
     describe "with invalid params" do
       it "assigns the user as @user" do
         User.any_instance.stub(:save).and_return(false)
-        put :update, { id: user1.to_param, user: { email: nil } }, valid_session
+        put :update, {
+          id: user1.to_param, user: {
+            password: password, password_confirmation: "#{password}a"
+          }
+        }, valid_session
         assigns(:user).should eq(user1)
       end
 
