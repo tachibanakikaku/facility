@@ -6,6 +6,7 @@ describe Shop do
   it { expect(subject).to be_an_instance_of Shop }
 
   describe "association" do
+    it { expect(subject).to have_many(:rooms) }
     it { expect(subject).to have_many(:users).through(:shops_users) }
   end
 end

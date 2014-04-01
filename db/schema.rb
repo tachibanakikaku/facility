@@ -16,8 +16,12 @@ ActiveRecord::Schema.define(:version => 20140320034635) do
   create_table "reservations", :force => true do |t|
     t.integer  "user_id"
     t.integer  "room_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "begins_at"
+    t.datetime "ends_at"
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "rooms", :force => true do |t|
