@@ -4,6 +4,7 @@ Facility::Application.routes.draw do
   resources :users
   resources :rooms
   resources :shops
+  resources :reservations
 
   root to: 'dashboard#index'
 end

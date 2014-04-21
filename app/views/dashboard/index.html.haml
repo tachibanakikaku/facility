@@ -7,4 +7,5 @@
       %a.list-group-item{ href: users_path }= t("users.index.title")
 .row
   .col-xs-6.col-md-4
-    %button.btn-primary{ type: "button" }= t("reservation.index.title")
+    %a{ href: reservations_path, class: "btn btn-primary"  }
+      = t("reservations.index.title")

@@ -1,0 +1,22 @@
+%h2= t("reservations.index.title")
+.row
+  .col-xs-6.col-md-4
+    show calendar here
+  .col-xs-6.col-md-8
+    show users here
+%hr
+.row
+  .col-xs-6.col-md-2
+    %button{ type: "button", class: "btn btn-primary"}
+      = t("actions.change_rooms")
+  .col-xs-6.col-md-10
+    show selected date here
+.row
+  .col-xs-6.col-md-10.col-md-offset-2
+    show hours in 2 hours interval
+.row
+  .col-xs-6.col-md-2
+    show room name
+  .col-xs-6.col-md-10
+    show schedule
+
